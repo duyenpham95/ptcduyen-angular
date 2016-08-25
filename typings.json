@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 {
   "globalDependencies": {
     "core-js": "registry:dt/core-js#0.0.0+20160602141332",
@@ -6,12 +6,4 @@
     "node": "registry:dt/node#6.0.0+20160621231320"
   }
 }
-=======
-{
-  "globalDependencies": {
-    "core-js": "registry:dt/core-js#0.0.0+20160602141332",
-    "jasmine": "registry:dt/jasmine#2.2.0+20160621224255",
-    "node": "registry:dt/node#6.0.0+20160621231320"
-  }
-}
->>>>>>> 25709e0cb45bf9c3b0d12202448474159d31aa07
+
