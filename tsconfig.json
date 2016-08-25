@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 {
   "compilerOptions": {
     "target": "es5",
@@ -11,17 +11,3 @@
     "noImplicitAny": false
   }
 }
-=======
-{
-  "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "removeComments": false,
-    "noImplicitAny": false
-  }
-}
->>>>>>> 25709e0cb45bf9c3b0d12202448474159d31aa07
