@@ -1,0 +1,35 @@
+import {Component} from '@angular/core';
+import {CarPart} from './carparts.mock';
+import {CARPARTS} from './carparts.model';
+
+@Component({
+	selector:'car-parts',
+	template:`
+	<h1>{{title}}</h1>
+	<p>There are {{totalCarParts()}} total parts in stock.</p>
+	<ul>
+	<li *ngFor="let carPart of carParts" >
+	<h2>{{carPart.name | uppercase }}</h2>
+	<p>{{carPart.description}}</p>
+	<p>{{carPart.price | currency:'EUR':true}}</p>
+	<p *ngIf="carPart.inStock > 0">{{carPart.inStock}} in Stock</p>
+	<p *ngIf="carPart.inStock === 0">Out of Stock</p>
+	</li>
+	<ul>`
+})
+
+export class CarPartsComponent{
+ carParts : CarPart[];
+ init(){
+	this.carParts = CARPARTS;
+ }
+
+totalCarParts(){
+		let sum = 0;
+		for (let carPart of this.carParts){
+			sum += carPart.inStock;
+		}
+		return sum;
+ }
+
+}

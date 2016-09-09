@@ -1,0 +1,6 @@
+import { bootstrap } from '@angular/platform-browser-dynamic';
+import { CarPartsComponent } from '../components/carparts.component';
+
+bootstrap(CarPartsComponent).catch((err) => {
+	console.log(err);
+});
