@@ -1,0 +1,32 @@
+<div class="all">
+    <!--<a routerLink="/carpart"></a>
+    <router-outlet></router-outlet>    -->
+    <h1>{{title}}</h1>
+    <p class="total">There are {{totalCarParts()}} total parts in stock.</p>
+    <ul>      
+        <li class = "card" *ngFor="let carPart of carParts" [class.feature]="carPart.feature">        
+            <table class="panel-body">
+                <tr>
+                    <td class="photo col-xs-3">
+                        <img [src]="carPart.image">
+                    </td>
+                    <td class="product-info col-xs-9">
+                        <h2 class="product-name">{{carPart.name | uppercase }}</h2>        
+                        <p class="product-description">{{carPart.description}}</p>   
+                        <p class="product-instock" *ngIf="carPart.inStock > 0">{{carPart.inStock}} in Stock</p>        
+                        <p class="product-outstock" *ngIf="carPart.inStock === 0">Out of Stock</p>     
+                        <div class="right-panel">
+                            <p class="product-price">{{carPart.price | currency:'EUR':true}}</p>
+                            <div class="quantity-panel">
+                                <button button class="btn btn-default descrease"  (click)="downQuantity(carPart)" (keyup)="checkValidQuantity(carPart)">-</button>
+                                <!--E1-->
+                                <input type="text" [(ngModel)]="carPart.quantity">
+                                <button class="btn btn-default increase" (click)="upQuantity(carPart)">+</button>
+                            </div>
+                        </div> 
+                    </td>
+                </tr>
+            </table>      
+        </li>    
+    </ul>
+</div>
